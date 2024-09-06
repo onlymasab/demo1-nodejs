@@ -1,0 +1,11 @@
+{
+  "name": "demo1-nodejs",
+  "version": "1.0.1",
+  "description": "this is my first project in nodejs",
+  "main": "main.js",
+  "scripts": {
+    "start" : "node main"
+  },
+  "author": "Masab Ejaz",
+  "license": "ISC"
+}
