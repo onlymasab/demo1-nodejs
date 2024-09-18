@@ -1,16 +1,30 @@
-const http = require("http");
+const express = require("express");
+const data = require("./MOCK_DATA.json")
+
+const port = 8000;
+const app = express();
+
+app.route("/users/:id")
+.get((req, res) =>  {
+
+    const id = parseInt(req.params.id);
+    const user = data.find(user => user.id === id);
 
 
-const server = http.createServer(
- (req, res)   => {
-    switch(req.url) {
-        case "/": res.end("Hello I'm your server")
-            break;
-        case "/about": res.end("Your are Shabana")
-            break;
-        default: res.end("Page is not found 404")
-    }
- }
-)
+    const html = `
+    <ul>    
+        <li>${user.email}</li>
+    </ul>
+    `;
 
-server.listen(4545, () => console.log("Server is Listning...."))
+    res.send(html)
+}).post((req, res ) => {})
+.post((req, res ) => {})
+.patch((req, res ) => {})
+.delete((req, res ) => {})
+
+
+
+app.listen(port , () => console.log("Server is started: " + port));
+
+

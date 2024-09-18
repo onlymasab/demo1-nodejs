@@ -1,11 +1,16 @@
 {
-  "name": "demo1-nodejs",
+  "name": "demo",
   "version": "1.0.1",
-  "description": "this is my first project in nodejs",
+  "description": "this is me new project for nodejs",
   "main": "main.js",
   "scripts": {
-    "start" : "node main"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
   },
   "author": "Masab Ejaz",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.20.0",
+    "url": "^0.11.4"
+  }
 }
